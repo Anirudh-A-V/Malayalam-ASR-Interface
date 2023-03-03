@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { projectStorage, projectFirestore, timestamp } from '../firebase/config';
+import { storage, db, timestamp } from '../firebase/config';
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { collection, addDoc, doc, deleteDoc } from "firebase/firestore";
 
@@ -11,8 +11,8 @@ const useStorage = ({file, collectionName}) => {
 
     useEffect(() => {
         // references
-        const storageRef = ref(projectStorage, file.name);
-        const collectionRef = collection(projectFirestore, collectionName);
+        const storageRef = ref(storage, file.name);
+        const collectionRef = collection(db, collectionName);
 
         const uploadImage = uploadBytesResumable(storageRef, file);
 
