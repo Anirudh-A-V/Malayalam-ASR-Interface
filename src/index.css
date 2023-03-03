@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+
+}
+
+.container {
+  min-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.record-start {
+  width: 200px;
+  height: 50px;
+  margin: 2rem auto;
+  display: block;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.record-start:hover {
+  background-color: #3e8e41;
+}
+
+.record-stop {
+  width: 200px;
+  height: 50px;
+  margin: 2rem auto;
+  display: block;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: #fff;
+  cursor: pointer;
+}
+
+.record-stop:hover {
+  background-color: #e53935;
+}
+
+audio {
+  width: 100%;
+  border-radius: 2rem;
+  background-color: #f2f2f2;
+  color: #000;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.record-audio {
+  margin-top: 2rem;
+}
+
+.uploading {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.uploading p {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.record-upload {
+  width: 200px;
+  height: 50px;
+  margin: 2rem auto;
+  display: block;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+.record-upload:hover {
+  background-color: #3e8e41;
+}
+
+.record-pause {
+  width: 200px;
+  height: 50px;
+  margin: 2rem auto;
+  display: block;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #365cf4;
+  color: #fff;
+  cursor: pointer;
+}
+
+.record-pause:hover {
+  background-color: #2c4ed1;
+}
+
+.record-resume {
+  width: 200px;
+  height: 50px;
+  margin: 2rem auto;
+  display: block;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #36f446;
+  color: #fff;
+  cursor: pointer;
+}
+
+.record-resume:hover {
+  background-color: #2ed13e;
+}
+
+.recorded-audios h2 {
+  text-align: start;
+  margin-top: 2rem;
+  font-size: 1.7rem;
+  color: #333;
+}
+
+.recorded-audio-list {
+  margin-top: 2rem;
+}
+
+.recorded-audio {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.recorded-audio audio {
+  margin: 1rem;
+}
+
+.record-delete {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
