@@ -58,7 +58,7 @@ export default function App() {
 	const convertAudio = async () => {
 		handleLoading(true)
 
-		const url = 'http://gokulgmenon.pythonanywhere.com/post';
+		const url = 'https://gokulgmenon.pythonanywhere.com/post';
 
 		const formData = new FormData();
 		formData.append('file', audioBlob);
@@ -101,12 +101,12 @@ export default function App() {
 
 	return (
 		<>
-			<div className="flex justify-center items-center flex-col">
+			<div className="flex justify-center items-center flex-col max-sm:justify-between">
 				<div className=" mb-24 mt-14 flex flex-col items-center justify-center">
-					<div className="text-8xl text-transparent title font-bold font-outline-2">
+					<div className="text-8xl text-transparent title font-bold font-outline-2 max-sm:text-5xl">
 						Malayalam
 					</div>
-					<div className="title text-8xl text-[#F6F8FB] title font-bold">
+					<div className="title text-8xl text-[#F6F8FB] title font-bold max-sm:text-5xl">
 						XLSR Model
 					</div>
 				</div>
@@ -174,28 +174,36 @@ export default function App() {
 			</div>
 			<div className="details">
 				<div className="flex flex-col items-start justify-center">
-					<div className="text-base text-[#F6F8FB] title font-bold">
+					<div className="text-base text-[#F6F8FB] title font-bold max-lg:text-xl">
 						Research Paper by Kavya Suresh
 					</div>
-					<div className="text-sm text-[#F6F8FB] title font-bold">
+					<div className="text-sm text-[#F6F8FB] title font-bold max-lg:text-lg">
 						Research Intern at IIT Madras
 					</div>
-					<div className="text-sm text-[#F6F8FB] title font-bold">
+					<div className="text-sm text-[#F6F8FB] title font-bold max-lg:text-lg">
 						Gokul G Menon, Ashish Abraham
 					</div>
 				</div>
 			</div>
-			<motion.div className="floating cursor-pointer"
+			<motion.div className="floating cursor-pointer bg-white"
 				layout
 				transition={{ duration: 0.3, ease: "backOut" }}
 
 				data-onhover={hover}
 				initial={{ borderRadius: 50 }}
-				onMouseEnter={() => { setHover(true) }}
-				onMouseLeave={() => { handleHover() }}
+				onMouseEnter={() => { 
+					if (window.innerWidth > 1024){
+						setHover(true)
+					}
+				 }}
+				onMouseLeave={() => { 
+					if (window.innerWidth > 1024){
+						handleHover() 
+					}
+				}}
 			>
-				{hover && <motion.p className="text-xl font-normal text-[#F6F8FB] ">Get the Research Paper</motion.p>}
-				<HiDownload className="icon text-4xl text-[#F6F8FB] cursor-pointer rounded-full p-1" onClick={() => { }} />
+				{hover && <motion.p className="text-xl font-normal text-[#f107a3] ">Get the Research Paper</motion.p>}
+				<HiDownload data-onhover={hover} className="icon text-4xl text-[#F6F8FB] cursor-pointer rounded-full p-1 max-lg:text-5xl bg-[#f107a3]" onClick={() => { }} />
 				{/* {hover ? (
 					<>
 						<motion.p className="text-xl font-normal text-[#F6F8FB] ">Get the Research Paper</motion.p>
