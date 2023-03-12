@@ -79,7 +79,7 @@ body {
   align-items: center;
   width: 50px;
   height: 50px;
-  background: rgb(241, 7, 163);
+  background: #f107a3;
   border-radius: 50%;
   
 
@@ -124,11 +124,20 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  padding: 0px 4px;
-  background: rgba(241, 7, 163);
+  /* background: rgba(241, 7, 163); */
   /* border: 2px solid #fff; */
   z-index: 999;
   margin: 20px;
+}
+
+.icon {
+  height: 45px;
+  width: 45px;
+}
+
+.icon[data-onhover="true"] {
+  height: 40px;
+  width: 40px;
 }
 
 .details {
@@ -139,6 +148,7 @@ body {
 }
 
 .floating[data-onhover="true"] {
+  padding: 0px 4px;
   width: 270px;
   height: 50px;
   justify-content: space-evenly;
