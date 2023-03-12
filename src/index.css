@@ -22,6 +22,7 @@ body {
 
 * {
   box-sizing: border-box;
+  /* border: 1px red solid !important; */
 }
 
 body {
@@ -141,4 +142,30 @@ body {
   width: 270px;
   height: 50px;
   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 450px) {
+
+  .parent[data-isopen="true"] {
+    width: 300px;
+    height: 300px;
+    /* justify-content: flex-end; */
+  }
+
+  .details {
+    position: static;
+    margin-bottom: 100px;
+  }
+
+  body {
+    align-items: stretch;
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .floating{
+    height: 70px;
+    width: 70px;
+    margin: 40px;
+  }
 }
