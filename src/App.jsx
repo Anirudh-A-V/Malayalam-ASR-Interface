@@ -4,8 +4,8 @@ import { BsFillPauseFill, BsStopFill, BsFillPlayFill } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 
 import "./index.css";
-import Wave from "./Components/Wave";
-import Ripple from "./Components/Ripple";
+import Wave from "./Components/Wave/Wave";
+import Ripple from "./Components/Ripple/Ripple";
 
 export default function App() {
 	const [isOpen, setIsOpen] = useState(false);
