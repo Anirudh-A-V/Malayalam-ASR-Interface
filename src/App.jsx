@@ -174,13 +174,13 @@ export default function App() {
 			</div>
 			<div className="details">
 				<div className="flex flex-col items-start justify-center">
-					<div className="text-base text-[#F6F8FB] title font-bold max-lg:text-xl">
-						Research Paper by Kavya Suresh
+					<div className="detail-header text-base text-[#F6F8FB] title font-bold">
+						Research Paper by Kavya Manohar
 					</div>
-					<div className="text-sm text-[#F6F8FB] title font-bold max-lg:text-lg">
+					<div className="detail-desc text-sm text-[#F6F8FB] title font-bold">
 						Research Intern at IIT Madras
 					</div>
-					<div className="text-sm text-[#F6F8FB] title font-bold max-lg:text-lg">
+					<div className="detail-desc text-sm text-[#F6F8FB] title font-bold">
 						Gokul G Menon, Ashish Abraham
 					</div>
 				</div>
@@ -203,7 +203,7 @@ export default function App() {
 				}}
 			>
 				{hover && <motion.p className="text-xl font-normal text-[#f107a3] ">Get the Research Paper</motion.p>}
-				<HiDownload data-onhover={hover} className="icon text-4xl text-[#F6F8FB] cursor-pointer rounded-full p-1 max-lg:text-5xl bg-[#f107a3]" onClick={() => { }} />
+				<HiDownload data-onhover={hover} className="icon text-[#F6F8FB] cursor-pointer rounded-full p-1 bg-[#f107a3]" onClick={() => { }} />
 				{/* {hover ? (
 					<>
 						<motion.p className="text-xl font-normal text-[#F6F8FB] ">Get the Research Paper</motion.p>
